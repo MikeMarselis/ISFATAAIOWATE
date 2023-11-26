@@ -1,0 +1,89 @@
+﻿<Window xmlns="https://github.com/avaloniaui" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ISFATAAIOWATE.ViewModels"
+        mc:Ignorable="d" Width="930" Height="460" CanResize="False"
+        x:Class="ISFATAAIOWATE.Views.AdminHomePageWindow"
+        Title="AdminHomePageWindow"
+        x:Name="ThisWindow">
+        <Design.DataContext>
+                <vm:HomePageVM/>
+        </Design.DataContext>
+        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto,Auto">
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition MinWidth="350"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                
+                
+                <DataGrid Grid.Row="1" Grid.Column="1" Height="400" AutoGenerateColumns="False" 
+                          ItemsSource="{Binding Employees}" 
+                          HorizontalAlignment="Center" VerticalAlignment="Center" 
+                          IsReadOnly="True" x:Name="EmployeeDataGrid">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="№" Binding="{Binding EmployeeId}"/>
+                        <DataGridTextColumn Header="ФИО" Binding="{Binding Lfs}" />
+                        <DataGridTextColumn Header="Отдел" Binding="{Binding Department}" />
+                        <DataGridTextColumn Header="Контакты" Binding="{Binding ContactInfo}" />
+                    </DataGrid.Columns>
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="Одежда сотрудника:" Margin="5,0,0,5"/>
+                                <DataGrid HeadersVisibility="None" AutoGenerateColumns="False" ItemsSource="{Binding EmployeeClothings}" IsReadOnly="True">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Clothing.Name}" Width="300" />
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
+                </DataGrid>
+                
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" Margin="10 10 10 10">
+                    <Button Content="Выдача одежды" Margin="5"
+                            Command="{Binding OpenWindow3}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="Возврат одежды" Margin="5"
+                            Command="{Binding OpenWindow5}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="История выдачи одежды" Margin="5"
+                            Command="{Binding OpenWindow4}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="Регистрация сотрудников" Margin="5" 
+                            Command="{Binding OpenWindow1}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="Редактирование сотрудника" Margin="5"
+                            Command="{Binding OpenWindow2}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="Редактирование одежды" Margin="5"
+                            Command="{Binding OpenWindow6}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Label Content="Вывод в Excel" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <Button Content="Список сотрудников" Margin="5"
+                            Command="{Binding EmployeesReport}"
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                    <Button Content="Список одежды" Margin="5"/>
+                    <Button Content="Логи взятия одежды" Margin="5"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="2">
+                    <Button Content="Выход" Margin="5"
+                            Command="{Binding OpenWindow7}" 
+                            CommandParameter="{Binding ElementName=ThisWindow}"/>
+                </StackPanel>
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="Найти:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,7"/>
+                <TextBox Grid.Column="0" Grid.Row="2" Width="135" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                         x:Name="SearchTBox"
+                         Text="{Binding SearchTBox_OnTextChanged}"
+                         />
+            </Grid>
+    </Grid>
+</Window>

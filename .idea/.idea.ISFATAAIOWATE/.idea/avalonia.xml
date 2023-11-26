@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ISFATAAIOWATE/App.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/AdminHomePageWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/AuthorizationWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/ClothesIssuanceLogs.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/ClothesIssuanceLogsWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/ClothingDeliveryWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/EditingAndDeletingClothesWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/EditingClothingDataWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/EditingEmployeeDataWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/EmployeeEditingWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/EmployeeRegistrationWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/HomePage.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/HomePageWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/MainWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/RentingOutClothesWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+        <entry key="ISFATAAIOWATE/Views/ReportsWindow.axaml" value="ISFATAAIOWATE/ISFATAAIOWATE.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

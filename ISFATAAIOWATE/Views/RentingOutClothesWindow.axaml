@@ -1,0 +1,65 @@
+﻿<Window xmlns="https://github.com/avaloniaui" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vm="using:ISFATAAIOWATE.ViewModels"
+        x:Class="ISFATAAIOWATE.Views.RentingOutClothesWindow"
+        Title="RentingOutClothesWindow"
+        x:Name="ThisWindow">
+        <Design.DataContext>
+                <vm:RentingOutClothesVM/>
+        </Design.DataContext>
+        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto,Auto">
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition MinWidth="700"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                
+                <DataGrid Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" 
+                          ItemsSource="{Binding Employees}" 
+                          HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" Height="400">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="№" Binding="{Binding EmployeeId}"/>
+                        <DataGridTextColumn Header="ФИО" Binding="{Binding Lfs}" />
+                        <DataGridTextColumn Header="Отдел" Binding="{Binding Department}" />
+                        <DataGridTextColumn Header="Контакты" Binding="{Binding ContactInfo}" />
+                    </DataGrid.Columns>
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="Одежда сотрудника:" Margin="5,10,0,10"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBox ItemsSource="{Binding EmployeeClothings}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="160"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock Text="{Binding Clothing.Name}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                                                    <Button Grid.Column="1" Command="{CompiledBinding ElementName=ThisWindow, Path=DeletingEmployeeClothing}"
+                                                            CommandParameter="{Binding}"
+                                                            Height="30" Width="160" Margin="20 0 0 0 "
+                                                            Content="Возврат" HorizontalAlignment="Left"></Button>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
+                </DataGrid>
+            </Grid>
+    </Grid>
+</Window>

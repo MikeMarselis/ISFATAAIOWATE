@@ -1,0 +1,54 @@
+﻿<Window xmlns="https://github.com/avaloniaui" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ISFATAAIOWATE.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ISFATAAIOWATE.Views.EmployeeEditingWindow"
+        x:DataType="vm:EmployeeEditingVM"
+        Title="HomePageWindow"
+        x:Name="ThisWindow">
+    <Design.DataContext>
+        <vm:EmployeeEditingVM/>
+    </Design.DataContext>
+    <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto,Auto">
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition MinWidth="930"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.Row="0" Grid.Column="1" AutoGenerateColumns="False" 
+                      ItemsSource="{Binding Employees}" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Binding="{Binding EmployeeId}"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" />
+                    <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding SecondName}"/>
+                    <DataGridTextColumn Header="Отдел" Binding="{Binding Department}" />
+                    <DataGridTextColumn Header="Контакты" Binding="{Binding ContactInfo}" />
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Command="{CompiledBinding ElementName=ThisWindow, Path=DeleteEmployee}" 
+                                    CommandParameter="{Binding}" 
+                                    Height="30" Width="160" Margin="5" 
+                                    Content="Удалить сотрудника" HorizontalAlignment="Left"></Button>
+                            <Button Command="{CompiledBinding ElementName=ThisWindow, Path=EditingEmployee}" 
+                                    CommandParameter="{Binding}" 
+                                    Height="30" Width="205" Margin="5" 
+                                    Content="Редактировать сотрудника" HorizontalAlignment="Left"></Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

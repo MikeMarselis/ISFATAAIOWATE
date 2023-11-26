@@ -1,0 +1,52 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ISFATAAIOWATE
+build_property.ProjectDir = C:\Users\Marselis\Desktop\ISFATAAIOWATE\ISFATAAIOWATE\
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/AdminHomePageWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/AuthorizationWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/ClothesIssuanceLogsWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/ClothingDeliveryWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/EditingAndDeletingClothesWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/EditingClothingDataWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/EditingEmployeeDataWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/EmployeeEditingWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/EmployeeRegistrationWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/HomePageWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Marselis/Desktop/ISFATAAIOWATE/ISFATAAIOWATE/Views/RentingOutClothesWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -1,0 +1,14 @@
+﻿<Window xmlns="https://github.com/avaloniaui" WindowStartupLocation="CenterScreen" MaxWidth="350" MaxHeight="250"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ISFATAAIOWATE.Views.ReportsWindow"
+        Title="ReportsWindow"
+	    x:Name="ThisWindow">
+	<Grid>
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+			
+		</StackPanel>
+	</Grid>
+</Window>

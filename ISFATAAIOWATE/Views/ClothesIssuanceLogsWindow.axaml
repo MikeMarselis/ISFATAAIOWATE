@@ -1,0 +1,23 @@
+﻿<Window xmlns="https://github.com/avaloniaui" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ISFATAAIOWATE.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ISFATAAIOWATE.Views.ClothesIssuanceLogsWindow"
+        Title="ClothesIssuanceLogs">
+        <Design.DataContext>
+                <vm:ClothesIssuanceLogsVM/>
+        </Design.DataContext>
+        <DataGrid Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" 
+                  ItemsSource="{Binding ClothingHistory}" 
+                  HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" MinHeight="500">
+                <DataGrid.Columns>
+                        <DataGridTextColumn Header="№" Binding="{Binding OrderId}"/>
+                        <DataGridTextColumn Header="ФИО" Binding="{Binding Lfsemployee}" />
+                        <DataGridTextColumn Header="Дата" Binding="{Binding OrderDate}" />
+                        <DataGridTextColumn Header="Статус" Binding="{Binding Status}" />
+                        <DataGridTextColumn Header="Одежда" Binding="{Binding ClothingName}" />
+                </DataGrid.Columns>
+        </DataGrid>
+</Window>
